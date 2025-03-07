@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTI REPORT(BASIC)</title>
+    <style>
+        /* reset */
+        html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, em, img, strong, table, caption, tbody, tfoot, thead, tr, th, td { font-size: 100%; font: inherit; vertical-align: baseline;  margin: 0; padding: 0;}
+        ol, ul, li { margin: 0; padding: 0; list-style: none; }
+        table { border-collapse: collapse; border-spacing: 0; }
+        input { vertical-align: middle; }
+        button { border: 0; font:inherit; background: transparent; cursor: pointer; }
+        a { text-decoration: none; color: inherit; cursor: pointer; }
+        b,strong { font-weight: 600; }
+        td, th { padding: 0; }
+        img {max-width:100%;}
+        textarea, input, select { outline: none; background: none; resize:none; -webkit-border-radius: 0 0; }
+        input:focus,input:active, button:focus,button:active, textarea:focus,textarea:active, a:focus,a:active { outline: none; }
+
+        :root {--point:#2a5ee4;}
+        /* content  */
+        .hidden {position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: polygon(0 0, 0 0, 0 0);}
+        .wrap {width: 700px; max-width: 90%; background: #fff; margin: 0 auto;}
+        header {position: relative; height: 202px; background: url(img/cti_letter_header.jpg) no-repeat center / 100%;}
+        header .num {position:absolute; right: 20px; bottom: 20px; font-size: 10px; color: #fff;}
+        .content {padding: 20px 50px;}
+        section {padding: 30px 0; border-bottom: 1px solid var(--point);}
+        section:last-of-type {border-bottom: 0;}
+        .content-title {margin-bottom: 28px; font-size: 28px; font-weight: 600; color: var(--point);}
+        .content-title span {display: block; margin-bottom: 4px; font-size: 0.57em; color: #848484;}
+        section p {font-size: 14px; line-height: 1.4;}
+        section .content-info {padding: 0 30px; margin-top: 20px;}
+
+        .list-area {padding: 20px 30px; background: #f3f6ff;}
+        .list-area strong {display: block; margin-bottom: 4px; font-size: 14px; color: var(--point);}
+        .list-area strong ~ strong {margin-top: 20px;}
+        .list-area li {padding-left: 18px; margin: 10px 0; font-size: 13px; text-indent: -18px; color: #666; word-break: break-all;}
+        .list-area li:last-of-type {margin-bottom: 0;}
+        .list-area li::before {content: ''; display: inline-block; vertical-align: middle; width: 3px; height: 3px; margin: 0 10px 0 5px; border-radius: 50%; background: #666; }
+
+        .news-list {font-size: 0;}
+        .news-list li {display: inline-block; vertical-align: middle; width: 30%; margin-right: 3%;}
+        .news-list li:last-of-type {margin-right: 0;}
+        .news-list img {height: 120px; object-fit: cover; object-position: center;}
+        .news-list h3 {margin-top: 10px; font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .news-list p {display: -webkit-box; width: 100%; margin-top: 4px; font-size: 12px; color: #666; line-height: 1.4;  overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+        footer {padding: 30px 50px; background: #f9f9f9;}
+        footer .f-logo {display: block; margin-bottom: 10px;}
+        footer p {font-size: 11px; color: #868686; line-height: 1.6;}
+        footer p + p {margin-top: 8px;}
+        footer p a {color: #000; text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="hidden">SSNC NEWS LETTER CTI REPORT</h1>
+            <span class="num">2025년 02월호</span>
+        </header>
+        <div class="content">
+            <section>
+                <h2 class="content-title">
+                    <span>General Overview</span>
+                    The Most Recent Artifact-based Threats
+                </h2>
+                <canvas id="myChart"></canvas>
+                <p class="content-info">
+                    In a recent threat assessment, analysis of 1000 malicious artifacts revealed a prevalent 
+                    cyber threat landscape. The most common MIME type associated with these artifacts was 
+                    'application/vnd.microsoft.portable-executable' (574 instances), followed by 
+                    'application/x-msdownload' (394 instances). The outstandingly high average confidence 
+                    level of 100.0 solidifies the severity of these threats. Artifacts detection showed a moderately 
+                    consistent trend over time with 442 detections (['2025-02-06'], 408 detections (['2025-02-07']), 
+                    and a sharp drop to 150 detections on the following day [‘2025-02-08’].
+                </p>
+            </section>
+            <section>
+                <h2 class="content-title">
+                    <span>Detailed Analysis</span>
+                    The Most Prominent Malicious Artifacts
+                </h2>
+                <div class="list-area">
+                    <strong>The top SHA-256 hashes</strong>
+                    <p>
+                        detected malicious artifacts represent diverse threats each with a distinctive signature.
+                    </p>
+                    <strong>For instance</strong>
+                    <p>
+                        among others, points towards the wide assortment of malicious entities at play.
+                    </p>
+                    <ul class="cti-list">
+                        <li>bcacf603de67f5c362796fa4f186755945251462c51febb8b335a752044abfce</li>
+                        <li>675bc7fbac6da61e4343961be9e309a0af841a2f9fcb7001bca2244521a57d00</li>
+                        <li>5e546d23bb8a203f3babec3b179940a58274a12bfdad63f21650f15e7d27fcc9</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2 class="content-title">
+                    SECURITY RECOMMENDATIONS & 
+                    PRECAUTIONS FOR SOCs AND COMPANIES
+                </h2>
+                <img src="img/img_security_sample.jpg" alt="security images">
+                <p class="content-info">
+                    Considering the prevalent threat landscape, recommended actions include ensuring the usage
+                    of updated anti-malware and antivirus software for early detection and removal of threats. 
+                    Organizational structures should be trained to recognize and avoid illegitimate files 
+                    (example .portable-executable and .x-msdownload mime types observed here). 
+                    Cybersecurity teams should remain vigilant for sudden changes in threat detection trends, 
+                    and apply rulesets to detect the SHA-256 threats. When identified, artifacts should be isolated
+                     and analyzed in a secure environment to prevent network-wide spread. Security teams 
+                    should regularly update their threat intelligence feeds to match and tackle emerging threats 
+                    in the cyber landscape effectively.
+                </p>
+            </section>
+            <section>
+                <h2 class="content-title">IT/Science Breaking News</h2>
+                <ul class="news-list">
+                    <li>
+                        <a href="#">
+                            <img src="img/cti_letter_header.jpg" alt="뉴스 이미지">
+                            <h3>[현장] "AI데이터인텔리전스 어쩌고" 뉴스</h3>
+                            <p>
+                                다크웹, SNS, 블록체인 분석 기술 보유 팔란티어 대비 5배 저렴한 AI로 AI 데이터 인텔리전스 어쩌고입니다.티어 대비 5배 저렴한 AI로 AI 데이터 인텔리전스 어쩌고입니
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/cti_letter_header.jpg" alt="뉴스 이미지">
+                            <h3>과학기술정보통신부, 법정부 AI 구현 어쩌고</h3>
+                            <p>
+                                과학기술정보통신부는 11일 범정부 초거대 AI 공통 기반구현 및 AI 기반의 어쩌고를 구현 어쩌고티어 대비 5배 저렴한 AI로 AI 데이터 인텔리전스 어쩌고입니
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/cti_letter_header.jpg" alt="뉴스 이미지">
+                            <h3>[현장] "AI데이터인텔리전스 어쩌고" 뉴스</h3>
+                            <p>
+                                다크웹, SNS, 블록체인 분석 기술 보유 팔란티어 대비 5배 저렴한 AI로 AI 데이터 인텔리전스 어쩌고입니다.티어 대비 5배 저렴한 AI로 AI 데이터 인텔리전스 어쩌고입니
+                            </p>
+                        </a>
+                    </li>
+    
+                </ul>
+            </section>
+        </div>
+        <footer>
+            <img src="img/img_ssnc_gray.png" alt="에스에스앤씨 로고" class="f-logo">
+            <p>
+                지난 레터는 SSNC <a href="#">[공식채널]</a> 에서 확인하실 수 있습니다.<br>
+                2025년 02월 11일 기준으로 이벤트 및 뉴스레터 수신 동의한 가입자에게만 보내 드리는 메일입니다.<br>
+                아쉽지만 더 이상 메일을 통해 새로운 소식을 받고 싶지 않다면 <a href="#">[수신거부]</a>를 눌러주세요.
+            </p>
+            <p>
+                모든 문의는 <a href="#">SSNC [고객센터]</a>를 통해 접수해주시면 빠르게 답변해 드리겠습니다.
+            </p>
+            <p>
+                (주) 에스에스앤씨 | 경기 광명시 일직로 43 1811~1813호 | 02-1234-5687 | help@ssnc.co.kr<br>
+                Copyright 2024 SSNC All Rights reserved.
+            </p>
+        </footer>
+    </div>
+    <script src="js/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+        
+        const data = {
+            "labels": [
+                "application/vnd.microsoft.portable-executable",
+                "application/x-msdownload",
+                "application/vnd.ms-excel",
+                "application/javascript",
+                "text/plain",
+                "application/octet-stream",
+                "application/xml",
+                "text/html",
+                "application/json"
+            ],
+            "datasets": [
+                {
+                    "label": "Top MIME Types",
+                    "data": [
+                        574,
+                        394,
+                        13,
+                        11,
+                        3,
+                        2,
+                        1,
+                        1,
+                        1
+                    ],
+                    "borderWidth": 1
+                }
+            ]
+        }
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: data.labels.map(value => { return value }),
+            datasets: [{
+              label: 'Top MIME Types',
+              data: data.datasets[0].data,
+              backgroundColor: (() => {
+                const dataValues = data.datasets[0].data;
+                const maxValue = Math.max(...dataValues);
+                return dataValues.map(value => value === maxValue ? '#2c67ff' : '#e9efff');
+              })(),
+            }]
+          },
+          options: {
+            scales: {
+              x: {
+                grid: {
+                  display: false, // x축 격자선 숨기기
+                },
+                ticks: {
+                  display: true, // x축 라벨 유지
+                },
+              },
+              y: {
+                grid: {
+                  display: false, // y축 격자선 숨기기
+                },
+                ticks: {
+                  stepSize: 10, // 10 단위로 표시
+                  beginAtZero: true, // 0부터 시작
+                  display: true, // y축 라벨 유지
+                },
+              },
+
+            }
+          }
+        });
+      </script>
+</body>
+</html>
