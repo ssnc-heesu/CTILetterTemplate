@@ -65,13 +65,14 @@
         .list-area li:last-of-type {margin-bottom: 0;}
         .list-area li::before {content: ''; display: inline-block; vertical-align: middle; width: 3px; height: 3px; margin: 0 10px 0 5px; border-radius: 50%; background: #666; }
 
-        .text-list {display: grid; grid-template-columns: repeat(2,1fr); gap: 24px 10px; align-items: start;}
-        .text-list em {display: block; width: 40px; height: 40px; font-size: 18px; font-weight: 800; line-height: 40px; text-align: center; color: #fff; border-radius: 14px; background: var(--point);}
-        .text-list h3 { margin-top:12px; font-size: 14px; font-weight: 800; color: var(--point); transform: skew(-0.1deg);}
-        .text-list h3 span { display: block; margin-top: 2px; font-size: 11px; font-weight: 600;}
-        .text-list  h3 + p { margin-top: 6px; font-size: 10px; letter-spacing: -0.06em; color: #666; }
+        .text-list li {position: relative; padding: 4px 0 0 58px;}
+        .text-list li + li {margin-top: 30px;}
+        .text-list em {position: absolute; top: 0; left: 0; width: 44px; height: 44px; font-size: 20px; font-weight: 800; line-height: 44px; text-align: center; color: #fff; border-radius: 14px; background: var(--point);}
+        .text-list h3 { font-size: 16px; font-weight: 800; color: var(--point); transform: skew(-0.1deg);}
+        .text-list h3 span { display: block; margin-top: 2px; font-size: 12px; font-weight: 600;}
+        .text-list  h3 + p { margin-top: 10px; font-size: 12px; letter-spacing: -0.06em; color: #666; }
 
-        table {width: 100%; border: 1px solid #f2f2f2; font-size: 11px;}
+        table {width: 100%; border: 1px solid #f2f2f2; font-size: 12px;}
         table th, table td {padding: 10px 6px; text-align: center;  transform: skew(-0.1deg);}
         table thead th {background: #f9fafc; font-weight: 600;}
         table td {border-bottom: 1px solid #f2f2f2;}
